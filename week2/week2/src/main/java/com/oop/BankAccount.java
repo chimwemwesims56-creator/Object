@@ -1,9 +1,18 @@
 package com.oop;
 
 public class BankAccount{
- public static void main(String[] args){
-        BankAccount jacobsAccount = new BankAccount();
-    BankAccount patricksAccount =new BankAccount();
-    System.out.println(jacobsAccount == patricksAccount);
+ public String accountHolder;
+ public double balance;
+  
+ public void deposit(double amount) {
+    this.balance = this.balance + amount;
+ }
+
+ public void withdraw(double amount) {
+    if(amount > this.balance) {
+        System.out.println("Insulficient funds");
+        return;
     }
+    this.balance = this.balance - amount;
+ }
 }
