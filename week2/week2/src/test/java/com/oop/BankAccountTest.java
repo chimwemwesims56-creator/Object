@@ -1,0 +1,18 @@
+package com.oop;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class BankAccountTest {
+   @Test
+   void testDeposit(){
+    //Arrange
+    BankAccount account = new BankAccount();
+
+    //Act
+    account.deposit(100);
+
+    //Assert
+    assertEquals(100, account.balance);
+   } 
+}
